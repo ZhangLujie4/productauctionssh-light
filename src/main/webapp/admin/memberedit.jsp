@@ -174,43 +174,6 @@ Member member = (Member)dao.findById(id,"Member");
 					</div>
 					
 				</form>
-     
-<script type="text/javascript">
-$("#username").blur(function(){
-var username = $(this).val();
-$.ajax({  
-	        type: "POST",      
-	         url: "usernamecheck.action",   
-	          data: "username="+username, 
-	         success: function(data){       
-	    if(data==0){ 
-	    $("#errmsg").text("用户名可用");
-	    $("#errmsg").css("display","block");
-	    $("#errmsg").css("color","green");
-	    $("#errmsg").css("font-weight:","20px;");
-	    }else{
-	    $("#errmsg").text("已存在的用户名");
-	    $("#errmsg").css("display","block");
-	    $("#errmsg").css("color","red");
-	    }   
-	 }     
-	});
-})
 
-
-<%
-String no = (String)request.getAttribute("no");
-String suc = (String)request.getAttribute("suc");
-if(no!=null){
-%>
-alert("已存在的用户名");
-location.replace("/productauctionssh/admin/usersadd.jsp");
-<%}%>
-<%
-if(suc!=null){
-%>
-location.replace("/productauctionssh/admin/usersmanager.jsp");
-<%}%>
-</script> 
 </body>
 </html>

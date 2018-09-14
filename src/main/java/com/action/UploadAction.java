@@ -15,13 +15,11 @@ import java.util.List;
 
 import javax.servlet.ServletException;  
   
-import javax.servlet.http.HttpServlet;  
-  
-  
-   
-  
+import javax.servlet.http.HttpServlet;
 
-import org.apache.commons.fileupload.FileItem;  
+
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;  
 import org.apache.commons.fileupload.servlet.ServletFileUpload;  
 import org.apache.struts2.ServletActionContext;
@@ -38,6 +36,7 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 
+@Slf4j
 public class UploadAction extends  ActionSupport {  
       
     private static final long   serialVersionUID = 1L;  
@@ -60,8 +59,10 @@ public class UploadAction extends  ActionSupport {
 		this.commonDAO = commonDAO;
 	}
 
-	public String execute() {  
-          
+	@Override
+    public String execute() {
+
+        log.info("开始上传");
     	System.out.println("开始上传。。。");
     	HttpServletResponse response = (HttpServletResponse)ActionContext.getContext().get(org.apache.struts2.StrutsStatics.HTTP_RESPONSE);
 		HttpServletRequest request = (HttpServletRequest)ActionContext.getContext().get(org.apache.struts2.StrutsStatics.HTTP_REQUEST);
@@ -83,8 +84,9 @@ public class UploadAction extends  ActionSupport {
         
         File file = new File(temp);    
         
-        if(!file.exists())
-        	file.mkdirs();
+        if(!file.exists()) {
+            file.mkdirs();
+        }
         try {  
             upload.upload(file); 
             response.getWriter().write(upload.getFileItem().getName());

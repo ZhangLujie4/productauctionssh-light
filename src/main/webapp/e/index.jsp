@@ -123,10 +123,6 @@ String type = request.getParameter("type")==null?"":request.getParameter("type")
              <div class="image-items"> 
              <%
              String hql="from Goods where delstatus='0' and shstatus='通过审核' and status='正在拍卖'";
-             if(!type.equals("")){hql+=" and type='"+type+"'";}
-             if(stype.equals("newgoods")){hql+=" order by stime desc";}
-             if(stype.equals("goodsprice")){hql+=" order by maxprice desc";}
-             if(stype.equals("clickgoods")){hql+=" order by cs desc";}
              ArrayList<Goods> tjlist = (ArrayList<Goods>)dao.findByHql(hql);
              int i=0;
              for(Goods tjgoods:tjlist){

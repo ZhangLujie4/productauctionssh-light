@@ -32,31 +32,10 @@
 			<li id="101" >
 				<a  href="/productauctionssh/e/myorder.jsp">我的订单</a>
 			</li>
-			
+
 			<li id="101" >
 				<a  href="/productauctionssh/e/saleorder.jsp">销售订单</a>
 			</li>
-			
-			<li id="101" >
-				<a  href="/productauctionssh/e/pingfenlist.jsp">卖家评分</a>
-			</li>
-			
-			
-			<li id="103" >
-				<a  href="/productauctionssh/e/myfav.jsp">我的足迹</a>
-			</li>
-			
-			<li id="103" >
-				<a  href="/productauctionssh/e/jubaolist.jsp">举报</a>
-			</li>
-			
-			<li id="103" >
-				<a  href="/productauctionssh/e/beijubaolist.jsp">违规信息</a>
-			</li>
-			
-			
-		
-			
 
 		</ul>
 	</div>
@@ -75,6 +54,7 @@
 			<li id="m203">
 				<a href="/productauctionssh/e/upassedit.jsp" target="_self">密码修改</a>
 			</li>
+
 			<li id="m204">
 				<a href="/productauctionssh/e/memberedit.jsp" target="_self">信息修改</a>
 			</li>

@@ -132,23 +132,5 @@ public class JingjiaAction extends ActionSupport {
 		suc = "";
 		return "success";
 	}
-	
-	//删除足迹
-	public String favDel() {
-		Map session = ActionContext.getContext().getSession();
-		Member m = (Member)session.get("member");
-		System.out.println(idlist);
-		String[] a = idlist.split(",");
-		for(int i=0;i<a.length;i++){
-		ArrayList<Jingjia> list = (ArrayList<Jingjia>)commonDAO.findByHql("from Jingjia where delstatus='0' and memberid='"+m.getId()+"' and gid='"+a[i]+"'");
-		for(Jingjia j:list){
-		j.setDelstatus("1");
-		commonDAO.update(j);
-		}
-		}
-		suc="";
-		return "success";
-	}
-	
 
 }

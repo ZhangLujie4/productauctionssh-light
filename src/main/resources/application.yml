@@ -2,7 +2,7 @@ spring:
   mvc:
     view:
       prefix: /
-      suffix: .jsp,.tld
+      suffix: .jsp,.tld,.swf
   application:
     name: productauctionssh
   datasource:

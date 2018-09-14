@@ -28,6 +28,4 @@ public class Shouquan implements Serializable {
     private String jsid;
 
     private String gnid;
-
-    private String fatherid;
 }

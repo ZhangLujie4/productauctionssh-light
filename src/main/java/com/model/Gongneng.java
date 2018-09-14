@@ -26,8 +26,6 @@ public class Gongneng {
 
     private String name;
 
-    private String fatherid;
-
     private String url;
 
     private String delstatus;

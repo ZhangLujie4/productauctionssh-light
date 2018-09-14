@@ -97,13 +97,7 @@ ArrayList<Producttype> plist = (ArrayList<Producttype>)dao.findByHql("from Produ
     <div class="wrap">       
       <ul class="menus clearfix">
        <li><a  id="1" class="current"  href="/productauctionssh/e/index.jsp">首页</a></li>
-       <li><a   id="41" class="" href="/productauctionssh/e/index.jsp?stype=newgoods">最新上架</a></li>
-       <li><a   id="41" class="" href="/productauctionssh/e/index.jsp?stype=goodsprice">价格排行</a></li>
-       <li><a   id="41" class="" href="/productauctionssh/e/index.jsp?stype=clickgoods">点击排行</a></li>
-       <%for(Producttype t:plist){ %>
-       <li><a   id="41" class="" href="/productauctionssh/e/index.jsp?type=<%=t.getId() %>"><%=t.getTypename() %></a></li>
-       <%} %>
-       <li><a  id="44" class=""  href="<%if(member!=null){ %>/productauctionssh/e/liuyan.jsp<%}else{ %>/productauctionssh/e/login.jsp<%} %>">站内信</a></li>    
+       <li><a  id="44" class=""  href="<%if(member!=null){ %>/productauctionssh/e/accountinfo.jsp<%}else{ %>/productauctionssh/e/login.jsp<%} %>">我的拍拍</a></li>
       </ul>    
      </div>
     </div>

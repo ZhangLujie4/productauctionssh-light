@@ -63,9 +63,9 @@
 			<%
 			CommonDAO dao = (CommonDAO)Info.getDao(request,"CommonDAO");
 			String spname = request.getParameter("spname");
-			if(spname!=null){
-			spname=Info.getUTFStr(spname);
-			}
+//			if(spname!=null){
+//			spname=Info.getUTFStr(spname);
+//			}
 			System.out.println("spname===="+spname);
 			ArrayList<Goods> list = (ArrayList<Goods>)dao.findByHql("from Goods where goodsname like '%"+spname+"%'");
 			for(Goods goods:list){
