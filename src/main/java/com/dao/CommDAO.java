@@ -19,7 +19,6 @@ import java.util.Properties;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.common.CommonParam;
 import com.util.Info;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

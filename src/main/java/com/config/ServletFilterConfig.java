@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * @author DMZ
- * @description
+ * @description struts2的配置文件
  */
 
 @Configuration
@@ -31,6 +31,5 @@ public class ServletFilterConfig {
         frgb.setUrlPatterns(list);
         return frgb;
     }
-
 
 }

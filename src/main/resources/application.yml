@@ -1,17 +1,22 @@
+
 spring:
   mvc:
     view:
       prefix: /
       suffix: .jsp,.tld,.swf
+  # 项目名称
   application:
     name: productauctionssh
+  # 数据库配置
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/productauctionssh_db?useSSL=false&characterEncoding=utf-8
+    url: jdbc:mysql://127.0.0.1:3306/productauctionssh?useSSL=false&characterEncoding=utf-8
     username: root
     password: zhanglujie
     driver-class-name: com.mysql.jdbc.Driver
 server:
+  # 项目启动的路径
   context-path: /productauctionssh
+  # 启动端口
   port: 8080
 dmz:
   projectUrl: http://localhost:${server.port}${server.context-path}

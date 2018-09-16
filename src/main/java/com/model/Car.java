@@ -14,15 +14,15 @@ import javax.persistence.*;
  */
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+@AllArgsConstructor //全部参数的构造函数
+@NoArgsConstructor //无参构造函数
 @Entity
 @Table(name = "Car")
 @Component("Car")
 public class Car {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //自增id
     private Integer id;
 
     private String ddno;

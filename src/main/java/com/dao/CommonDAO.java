@@ -23,6 +23,10 @@ public class CommonDAO {
 	@PersistenceContext
 	private EntityManager entityManager;
 
+	/**
+	 * 新增
+	 * @param transientInstance
+	 */
 	@Transactional
 	public void save(Object transientInstance) {
 
@@ -30,12 +34,22 @@ public class CommonDAO {
 
 	}
 
+	/**
+	 * 删除
+	 * @param persistentInstance
+	 */
 	@Transactional
 	public void delete(Object persistentInstance) {
 
 		entityManager.remove(entityManager.merge(persistentInstance));
 	}
 
+	/**
+	 * 按照id查
+	 * @param id
+	 * @param entity
+	 * @return
+	 */
 	public Object findById(int id,String entity){
 		Object instance = null;
 		try {
@@ -58,8 +72,11 @@ public class CommonDAO {
 	}
 
 
-	
-	
+	/**
+	 * hql查询语句
+	 * @param hql
+	 * @return
+	 */
 	public List findByHql(String hql) {
 
 		return entityManager.createQuery(hql).getResultList();
